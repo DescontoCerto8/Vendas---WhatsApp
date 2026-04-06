@@ -1,85 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Atendimento</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #2c5364);
-      color: white;
-      text-align: center;
-      padding: 40px;
-    }
+<title>Atendimento</title>
 
-    .box {
-      background: rgba(255,255,255,0.08);
-      padding: 30px;
-      border-radius: 20px;
-      max-width: 500px;
-      margin: auto;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    }
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #2c5364);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 
-    .titulo {
-      font-size: 22px;
-      margin-bottom: 20px;
-      background: #25D366;
-      color: white;
-      padding: 15px;
-      border-radius: 12px;
-      display: inline-block;
-    }
+.box {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: auto;
+}
 
-    #produto {
-      margin: 15px 0;
-      font-size: 16px;
-      color: #ddd;
-    }
+.titulo {
+  background: #25D366;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
 
-    .botoes {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
+#produto {
+  margin: 15px 0;
+  font-size: 16px;
+}
 
-    .botao {
-      background: #25D366;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-      min-width: 120px;
-    }
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
 
-    .botao:hover {
-      background: #1ebe5d;
-      transform: scale(1.05);
-    }
-
-  </style>
+.botao {
+  flex: 1;
+  background: #25D366;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+</style>
 </head>
 
 <body>
 
 <div class="box">
 
-  <div class="titulo">
-    Fale com um de nossos vendedores
-  </div>
+<div class="titulo">Fale com um de nossos vendedores</div>
 
-  <p id="produto"></p>
+<p id="produto"></p>
 
-  <div style="botoes">
-    <a id="hakila" class="botao" href="#">Hakila</a>
-    <a id="bruna" class="botao" href="#">Bruna</a>
-    <a id="fagner" class="botao" href="#">Fagner</a>
-  </div>
+<div class="botoes">
+  <a id="hakila" class="botao" href="#">Hakila</a>
+  <a id="bruna" class="botao" href="#">Bruna</a>
+  <a id="fagner" class="botao" href="#">Fagner</a>
+</div>
 
 </div>
 
@@ -95,7 +84,7 @@ document.getElementById("hakila").href =
 "https://wa.me/556684594406?text=" + encodeURIComponent(mensagem);
 
 document.getElementById("bruna").href =
-"https://wa.me/5566984426563?text=" + encodeURIComponent(mensagem);
+"https://wa.me/556684426563?text=" + encodeURIComponent(mensagem);
 
 document.getElementById("fagner").href =
 "https://wa.me/556285607521?text=" + encodeURIComponent(mensagem);
@@ -103,4 +92,3 @@ document.getElementById("fagner").href =
 
 </body>
 </html>
-
