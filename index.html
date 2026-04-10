@@ -19,7 +19,7 @@ body {
   background: rgba(255,255,255,0.08);
   padding: 25px;
   border-radius: 20px;
-  max-width: 400px;
+  max-width: 500px;
   margin: auto;
 }
 
@@ -36,9 +36,15 @@ body {
   font-size: 16px;
 }
 
-.botao {
-  display: block;
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   margin-top: 20px;
+}
+
+.botao {
+  flex: 1;
   background: #25D366;
   padding: 18px;
   border-radius: 12px;
@@ -53,9 +59,17 @@ body {
 <body>
 
 <div class="box">
-  <div class="titulo">Fale com um de nossos vendedores</div>
-  <p id="produto"></p>
-  <a id="btn" class="botao" href="#">Falar no WhatsApp</a>
+
+<div class="titulo">Fale com um de nossos vendedores</div>
+
+<p id="produto"></p>
+
+<div class="botoes">
+  <a id="hakila" class="botao" href="#">Hakila</a>
+  <a id="bruna" class="botao" href="#">Bruna</a>
+  <a id="fagner" class="botao" href="#">Fagner</a>
+</div>
+
 </div>
 
 <script>
@@ -64,21 +78,17 @@ const produto = params.get('produto') || 'um produto';
 
 document.getElementById("produto").innerText = "Produto: " + produto;
 
-const vendedores = [
-  "556684594406",
-  "556684426563"
-];
-
-let contador = localStorage.getItem("contador") || 0;
-
-const vendedor = vendedores[contador % vendedores.length];
-
-localStorage.setItem("contador", parseInt(contador) + 1);
-
 const mensagem = `Olá! Vim do Google e quero esse produto: ${produto}`;
 
-document.getElementById("btn").href =
-"https://wa.me/" + vendedor + "?text=" + encodeURIComponent(mensagem);
+  document.getElementById("fagner").href =
+"https://wa.me/556285607521?text=" + encodeURIComponent(mensagem);
+  
+document.getElementById("hakila").href =
+"https://wa.me/556684594406?text=" + encodeURIComponent(mensagem);
+
+document.getElementById("bruna").href =
+"https://wa.me/5566984426563?text=" + encodeURIComponent(mensagem);
+
 </script>
 
 </body>
