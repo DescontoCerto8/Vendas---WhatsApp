@@ -38,7 +38,6 @@ body {
 
 .botoes {
   display: flex;
-  justify-content: center;
   gap: 10px;
   margin-top: 20px;
 }
@@ -65,30 +64,33 @@ body {
 <p id="produto"></p>
 
 <div class="botoes">
-  <a id="fagner" class="botao" href="#">Fagner</a>
   <a id="hakila" class="botao" href="#">Hakila</a>
   <a id="bruna" class="botao" href="#">Bruna</a>
+  <a id="fagner" class="botao" href="#">Fagner</a>
 </div>
 
 </div>
 
 <script>
 const params = new URLSearchParams(window.location.search);
+
 const produto = params.get('produto') || 'um produto';
+const codigo = params.get('codigo') || 'sem código';
 
-document.getElementById("produto").innerText = "Produto: " + produto;
+document.getElementById("produto").innerText =
+"Produto: " + produto + " | Código: " + codigo;
 
-const mensagem = `Olá! Vim do catalogo queria esse produto: ${produto}`;
+const mensagem =
+`Olá! quero esse produto: ${produto}, Código ${codigo}`;
 
-  document.getElementById("fagner").href =
+ document.getElementById("fagner").href =
 "https://wa.me/556285607521?text=" + encodeURIComponent(mensagem);
-  
+
 document.getElementById("hakila").href =
 "https://wa.me/556684594406?text=" + encodeURIComponent(mensagem);
 
 document.getElementById("bruna").href =
 "https://wa.me/5566984426563?text=" + encodeURIComponent(mensagem);
-
 </script>
 
 </body>
