@@ -43,18 +43,29 @@ body {
     width: 100%; /* Garante que o container ocupe a largura correta */
 }
 
+.botoes {
+    display: flex !important; 
+    flex-direction: row !important; /* Força os elementos a ficarem na horizontal */
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .botao {
-  flex: 1; /* Mudado de 10 para 1. Faz os dois dividirem a tela igualmente lado a lado */
-  display: inline-block; /* OBRIGATÓRIO se o botão for um link <a> */
-  text-align: center; /* Centraliza o texto dentro do botão */
+  flex: 1; /* Faz os dois dividirem o espaço 50/50 na mesma linha */
+  display: block; /* Como estão dentro de Flexbox, block fará eles preencherem o flex: 1 */
+  text-align: center; 
   background: #25D366;
-  padding: 18px;
+  padding: 18px 10px; /* Reduzimos um pouco o espaço interno nas laterais para caber melhor */
   border-radius: 12px;
   text-decoration: none;
   color: white;
   font-size: 18px;
   font-weight: bold;
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho do botão */
 }
+
 
 </style>
 </head>
