@@ -40,10 +40,13 @@ body {
     display: flex; 
     gap: 10px;
     margin-top: 20px;
+    width: 100%; /* Garante que o container ocupe a largura correta */
 }
 
 .botao {
-  flex: 10;
+  flex: 1; /* Mudado de 10 para 1. Faz os dois dividirem a tela igualmente lado a lado */
+  display: inline-block; /* OBRIGATÓRIO se o botão for um link <a> */
+  text-align: center; /* Centraliza o texto dentro do botão */
   background: #25D366;
   padding: 18px;
   border-radius: 12px;
@@ -52,6 +55,7 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
+
 </style>
 </head>
 
